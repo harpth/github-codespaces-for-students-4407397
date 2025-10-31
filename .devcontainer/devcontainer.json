@@ -4,5 +4,21 @@
     },
     "updateContentCommand": "npm install",
     "postAttachCommand": "npm start",
-    "remoteUser":"node"
+    "remoteUser":"node",
+    "forwardPorts": [3000],
+    "portsAttributes": {
+        "3000": {
+            "label": "Application",
+            "onAutoForward": "openPreview"
+        }
+    }
+    "customizations": {
+        "vscode": {
+            "extensions":["esbenp.prettier-vscode"],
+            "settings": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnSave": true
+            }
+        }
+    }
 }
